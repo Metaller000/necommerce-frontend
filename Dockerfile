@@ -1,6 +1,6 @@
 FROM node:lts AS build
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 # RUN npm ci
 RUN npm i
 COPY . .
