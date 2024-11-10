@@ -4,7 +4,7 @@ COPY package.json ./
 # RUN npm ci
 RUN npm i
 COPY . .
-RUN npm run build
+RUN NODE_OPTIONS=--openssl-legacy-provider npm run build
 
 FROM nginx
 WORKDIR /app
